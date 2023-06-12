@@ -2,5 +2,3 @@
 
 2. Typo3 Scheduler
 Sichergehen das in der Typo3 Extension der Scheduler vorhanden und aktiv ist. Sollte er das 	nicht sein, via composer downloaden. 
-
-  • Dateierstellung MySkript.php im Verzeichnis typo3conf/ext/ekhn/classes/Task
