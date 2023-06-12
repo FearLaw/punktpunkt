@@ -17,7 +17,7 @@ $data = [
 ];
 
 // SQL-Query vorbereiten
-$stmt = $mysqli->prepare("INSERT INTO your_table_name (uid, url, name) VALUES (?, ?, ?)");
+$stmt = $mysqli->prepare("INSERT INTO my_table_name (uid, url, name) VALUES (?, ?, ?)");
 $stmt->bind_param('sss', $data['uid'], $data['url'], $data['name']);
 
 // Query ausführen
