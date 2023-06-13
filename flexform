@@ -1,0 +1,28 @@
+<!-- T3 beginnt und endet die Flexform -->
+<T3DataStructure>
+<!-- Unterteilung -->
+    <sheets>
+    <!-- Name des Sheets -->
+        <sDEF>
+        <!-- Root ist anfang und ende vom sheet -->
+            <ROOT>
+            <!-- TCE allgemeine einstellungen definieren -->
+                <TCEforms>
+                    <sheetTitle>Person Address</sheetTitle>
+                </TCEforms>
+                <el>
+                    <settings.personUid>
+                        <TCEforms>
+                            <label>Select a person</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <foreign_table>Personen</foreign_table>
+                            </config>
+                        </TCEforms>
+                    </settings.personUid>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
