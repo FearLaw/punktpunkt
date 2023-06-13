@@ -1,1 +1,37 @@
+<?php
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 
+class ApiImportService
+{
+    //nimmt url 
+    public function getApiData($url)
+    {
+        // nimm url content > inhalt lesen
+        $json = file_get_contents($url);
+        // json string zu php variable
+        $data = json_decode($json, true);
+
+        return $data;
+    }
+
+    public function importData($data)
+    {
+        // ConnectionPool Typo3 Klasse die Datenbankverwaltet
+        $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
+
+        // Import
+        $personenConnection = $connectionPool->getConnectionForTable('Personen');
+        $personenConnection->insert('Personen', [
+            'uid' => $data['uid'],
+            'name' => $data['name'],
+            //...
+        ]);
+
+        // Import
+        $adresseConnection = $connectionPool->getConnectionForTable('Adresse');
+        $adresseConnection->insert('Adresse', [
+            'name' => $data['postanschrift']['name'],
+            'strasse' => $data['postanschrift']['strasse'],
+            //...
+        ]);
