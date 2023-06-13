@@ -4,3 +4,7 @@
 Sichergehen das in der Typo3 Extension der Scheduler vorhanden und aktiv ist. Sollte er das 	nicht sein, via composer downloaden. 
 
 3. Solr Extension installieren und Konfigurieren. 
+
+4. Neues Inhaltselement, Fluid Template, Konfiguration für Backend User um Einzelauswahl möglich zu machen. 
+
+5. Zugriff kann im Backend System > Backend User verteilt werden.
